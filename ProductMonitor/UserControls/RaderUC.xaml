@@ -1,0 +1,83 @@
+﻿<UserControl
+    x:Class="ProductMonitor.UserControls.RaderUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ProductMonitor.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Grid x:Name="LayGrid">
+        <!--  画布  -->
+        <Canvas x:Name="mainCanvas" />
+        <!--  多边形  -->
+        <Grid>
+            <!--  多边形 P1，使用渐变描边  -->
+            <Polygon x:Name="P1" StrokeThickness="2">
+                <Polygon.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="Red" />
+                        <GradientStop Offset="1" Color="DarkRed" />
+                    </LinearGradientBrush>
+                </Polygon.Stroke>
+            </Polygon>
+
+            <!--  多边形 P2，使用渐变描边和填充  -->
+            <Polygon
+                x:Name="P2"
+                Fill="LightGray"
+                StrokeThickness="2">
+                <Polygon.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="Black" />
+                        <GradientStop Offset="1" Color="Gray" />
+                    </LinearGradientBrush>
+                </Polygon.Stroke>
+            </Polygon>
+
+            <!--  多边形 P3，半透明填充和渐变描边  -->
+            <Polygon
+                x:Name="P3"
+                Fill="#AA32CD32"
+                StrokeThickness="2">
+                <Polygon.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="LimeGreen" />
+                        <GradientStop Offset="1" Color="DarkGreen" />
+                    </LinearGradientBrush>
+                </Polygon.Stroke>
+            </Polygon>
+
+            <!--  多边形 P4，带有渐变效果的描边和透明度  -->
+            <Polygon
+                x:Name="P4"
+                Fill="#8880C0FF"
+                StrokeThickness="2">
+                <Polygon.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="SkyBlue" />
+                        <GradientStop Offset="1" Color="Navy" />
+                    </LinearGradientBrush>
+                </Polygon.Stroke>
+            </Polygon>
+
+            <!--  数据多边形 P5，填充渐变和描边颜色  -->
+            <Polygon x:Name="P5" StrokeThickness="2">
+                <Polygon.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Offset="0" Color="Aquamarine" />
+                        <GradientStop Offset="1" Color="MediumAquamarine" />
+                    </RadialGradientBrush>
+                </Polygon.Fill>
+                <Polygon.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="Orange" />
+                        <GradientStop Offset="1" Color="DarkOrange" />
+                    </LinearGradientBrush>
+                </Polygon.Stroke>
+            </Polygon>
+        </Grid>
+
+    </Grid>
+</UserControl>
