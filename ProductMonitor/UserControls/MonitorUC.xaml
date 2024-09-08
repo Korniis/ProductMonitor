@@ -275,15 +275,21 @@
                     Margin="0,0,50,0"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
-                    Command=""
-                    Foreground="White"
-                    
-                    Style="{StaticResource BtnStyle}" Click="Btn_Setting_Click" >
-
-                    <TextBox >
-                        
-                    </TextBox>
-                    
+                    Click="Btn_Setting_Click"
+                    Foreground="Black"
+                    Style="{StaticResource BtnForSetting}">
+                    <TextBlock>
+                        <Run
+                            FontFamily="../Resource/Fonts/#iconfont"
+                            FontSize="14"
+                            Foreground="Black"
+                            Text="&#xe625;" />
+                        <Run
+                            FontSize="14"
+                            Foreground="Black"
+                            Text="设置" />
+                        <!--  图标文字  -->
+                    </TextBlock>
                 </Button>
             </StackPanel>
 
